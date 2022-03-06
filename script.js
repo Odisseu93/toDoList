@@ -17,10 +17,10 @@ function addItems() {
   const txtTaskValue = document.getElementById("textTarefaValor");
 
   //cria uma variável que recebe o elemento <p>
-  const task = document.createElement("p");
+  const task = document.createElement("li");
 
   //recuperando o valor do input  
-  task.innerText = txtTaskValue.value;
+  task.innerHTML = txtTaskValue.value;
 
   //adiciona filhos a div #itens
   document.getElementById("itens").appendChild(task);

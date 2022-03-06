@@ -1,0 +1,38 @@
+@media(max-width:425px){
+  
+
+body {
+  background: #FEE9CC;
+}
+
+.boxBtnAndTxtInput {
+  display:flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+
+}
+
+.btn {
+  width: 30%;
+  margin: 1%;
+}
+
+#textTarefaValor {
+  width: 60%;
+}
+
+.ToDoList {
+  width: 90%;
+  border: 1px solid #000000;
+}
+
+.itens {
+  background: #F1C4A5;
+  border-bottom: 1px solid #000000;
+}
+
+.hdrItens {
+  background: #65350f;
+}
+}
