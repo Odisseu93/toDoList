@@ -1,8 +1,56 @@
+:root {
+  font-family: 'Abel', sans-serif;
+  font-size:20px;
+  background: #FEE9CC;
+}
+
+
+h1 {
+  font-weight: bold;
+}
+.Cabecalho {
+background: linear-gradient(90deg,white 3%,#FFF6BA);
+}
+
+
+.rodape {
+  background: linear-gradient(180deg,white,#FFF6BA);;
+}
+
 @media(max-width:425px){
-  
+
 
 body {
-  background: #FEE9CC;
+  display: flex;
+  font-size: 50px;
+  flex-direction: column;
+  height: 940px;
+  justify-content: space-evenly;
+}
+
+.Cabecalho {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5%;
+  padding: 3%;
+}
+.frmList {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5%;
+  flex-grow: 4;
+  box-sizing: border-box;
+}
+
+.ToDoList { 
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 5%;
 }
 
 .boxBtnAndTxtInput {
@@ -12,6 +60,7 @@ body {
   align-items: center;
 
 }
+
 
 .btn {
   width: 30%;
@@ -35,4 +84,20 @@ body {
 .hdrItens {
   background: #65350f;
 }
+
+.rodape {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* flex-grow: 3; */
+  justify-content:end;
+  align-items: center;
+  padding: 3%;
+  margin: 0 auto;
+}
+
+.imgLogo{
+  width: 50%;
+}
+
 }

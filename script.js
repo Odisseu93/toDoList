@@ -20,11 +20,13 @@ function addItems() {
   const task = document.createElement("li");
 
   //recuperando o valor do input  
-  task.innerHTML = txtTaskValue.value;
+  task.innerHTML = "- " +
+  txtTaskValue.value;
 
   //adiciona filhos a div #itens
   document.getElementById("itens").appendChild(task);
   cont++; //adiona mais um na contagem;
+  console.log(document.getElementById("itens").childNodes.length);
 }
 
 /*

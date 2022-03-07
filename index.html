@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To Do list</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header class="Cabecalho">
     <img src="img\odisseu.png" class="hdrLogo">
@@ -18,19 +24,22 @@
   <form action="" class="frmList">
     <div class="boxBtnAndTxtInput">
       <input type="text" id="textTarefaValor" placeholder="insira a tarefa aqui">
-      <input type="button" id="btnInserir" class="btn" value="Inserir"> 
-      <input type="button" id="btnRemover" class="btn" value="Remover"> 
+      <input type="button" id="btnInserir" class="btn" value="Inserir">
+      <input type="button" id="btnRemover" class="btn" value="Remover">
     </div>
-      <div class="ToDoList">
-        <header class="hdrItens"><h1>Tarefas</h1></header>
-        <ul class="itens" id="itens">
-        </ul>
-    </div>  
+    <div class="ToDoList">
+      <header class="hdrItens">
+        <h1>Tarefas</h1>
+      </header>
+      <ul class="itens" id="itens">
+      </ul>
+    </div>
   </form>
   <script src="script.js"></script>
-  <footer>
-    <img src="img\odisseu_2.png" class="ftrLogo">
+  <footer class="rodape">
+    <img src="img\odisseu_2.png" class="imgLogo">
     <p>Copyright &#169; 2022 - Ulisses Silvério</p>
   </footer>
 </body>
+
 </html>
