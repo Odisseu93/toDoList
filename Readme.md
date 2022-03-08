@@ -1,4 +1,4 @@
-# toDoIst 
+# To Do List 
 ## Objetivos:
 - [X] Criar uma lista de Afazeres utilizando HTML e CSS
 - [X] Utilizar o JS para fazer a inclusão e remoção de itens dinamicamente
