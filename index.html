@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To Do list</title>
+  <title>Task List - To Do List</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="reset.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,27 +14,38 @@
 </head>
 
 <body>
-  <header class="Cabecalho">
+  <header class="Cabecalho" id="home">
     <img src="img\odisseu.png" class="hdrLogo">
     <nav class="nvMenu">
-      <h1><a href="#Home">home</a></h1>
-      <h1><a href="#Sobre">sobre</a></h1>
+      <a href="#home">
+        <h1>home</h1>
+      </a>
+      <a href="#sobre">
+        <h1>sobre</h1>
+      </a>
     </nav>
   </header>
-  <form action="" class="frmList">
-    <div class="boxBtnAndTxtInput">
-      <input type="text" id="textTarefaValor" placeholder="insira a tarefa aqui">
-      <input type="button" id="btnInserir" class="btn" value="Inserir">
-      <input type="button" id="btnRemover" class="btn" value="Remover">
-    </div>
-    <div class="ToDoList">
-      <header class="hdrItens">
-        <h1>Tarefas</h1>
-      </header>
-      <ul class="itens" id="itens">
-      </ul>
-    </div>
-  </form>
+  <div class="sobre" id="sobre">
+    <h1>Lista de tarefas</h1>
+    <br>Lista de tarefas são muito importantes para sermos mais organizados e produtivos.
+    Aqui você pode adicionar as suas tarefas e exclui-las, quando quiser.
+  </div>
+  <main>
+    <form action="" class="frmList">
+      <div class="boxBtnAndTxtInput">
+        <input type="text" id="textTarefaValor" placeholder="Insira a sua tarefa aqui">
+        <input type="button" id="btnInserir" class="btn" value="Inserir">
+        <input type="button" id="btnRemover" class="btn" value="Remover">
+      </div>
+      <div class="ToDoList">
+        <header class="hdrItens">
+          <h1>Tarefas</h1>
+        </header>
+        <ul class="itens" id="itens">
+        </ul>
+      </div>
+    </form>
+  </main>
   <script src="script.js"></script>
   <footer class="rodape">
     <img src="img\odisseu_2.png" class="imgLogo">

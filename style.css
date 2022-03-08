@@ -2,102 +2,238 @@
   font-family: 'Abel', sans-serif;
   font-size:20px;
   background: #FEE9CC;
+  color: #000000;
 }
 
+body {
+  background-image: url("fundo.png");
+}
 
 h1 {
   font-weight: bold;
+  text-align: center;
 }
 .Cabecalho {
 background: linear-gradient(90deg,white 3%,#FFF6BA);
 }
 
+.nvMenu a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 30px;
+}
+
+.nvMenu a:hover {
+
+  color: orange;
+
+}
+
+.nvMenu a:active {
+  color: blue;
+}
+
+.itens li {
+  background: #F1C4A5;
+  border-bottom: 1px double #000000;
+}
+
+.hdrItens {
+  background: #65350f;
+  color: white;
+}
+
+/* .nvMenu h1:hover{
+  background: #000000;
+} */
 
 .rodape {
   background: linear-gradient(180deg,white,#FFF6BA);;
 }
 
-@media(max-width:425px){
+/* .ToDoList li:active {
+  text-decoration: line-through;
+  text-transform: line-through; */
+/* } */
 
-
-body {
-  display: flex;
-  font-size: 50px;
-  flex-direction: column;
-  height: 940px;
-  justify-content: space-evenly;
-}
-
-.Cabecalho {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 5%;
-  padding: 3%;
-}
-.frmList {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 5%;
-  flex-grow: 4;
-  box-sizing: border-box;
-}
-
-.ToDoList { 
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin-top: 5%;
-}
-
-.boxBtnAndTxtInput {
-  display:flex;
-  flex-direction: column;
-  width: 90%;
-  align-items: center;
-
-}
-
-
-.btn {
-  width: 30%;
-  margin: 1%;
-}
-
-#textTarefaValor {
-  width: 60%;
-}
-
-.ToDoList {
-  width: 90%;
-  border: 1px solid #000000;
-}
-
-.itens {
-  background: #F1C4A5;
-  border-bottom: 1px solid #000000;
-}
-
-.hdrItens {
+.tksline-through{
+  /* text-decoration: line-through; */
   background: #65350f;
 }
 
-.rodape {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  /* flex-grow: 3; */
-  justify-content:end;
-  align-items: center;
-  padding: 3%;
-  margin: 0 auto;
+/*
+CSS Selector Reference
+ https://www.w3schools.com/cssref/css_selectors.asp
+*/
+
+
+/*
+mobile
+*/
+
+/*
+Telas até de 425px
+*/
+
+@media(max-width:425px){
+
+
+  body {
+    display: flex;
+    font-size: 50px;
+    flex-direction: column;
+    height: 967px;
+    justify-content: space-evenly;
+  }
+
+  .Cabecalho {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 1%;
+  }
+
+  .sobre {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.2%;
+    padding-right: 2%;
+    box-sizing: border-box;
+  }
+
+  .frmList {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    flex-grow: 4;
+    box-sizing: border-box;
+  }
+
+  .ToDoList { 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  .itens li {
+    text-align:left;  
+    margin-left: 1%;
+  }
+
+  .boxBtnAndTxtInput {
+    display:flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+
+  }
+
+  .btn {
+    width: 30%;
+    margin: 1%;
+  }
+
+  #textTarefaValor {
+    width: 60%;
+  }
+
+  .ToDoList {
+    width: 90%;
+    border: 1px solid #000000;
+  }
+
+  .rodape {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1%;
+    /* flex-grow: 1; */
+    justify-content:end;
+    align-items: center;
+    padding: 3%;
+    margin-bottom: -10%;
+  }
+
+  .imgLogo{
+    width: 50%;
+  }
+
 }
 
-.imgLogo{
-  width: 50%;
-}
+/*
+Telas acima de 768px
+*/
 
-}
+@media(min-width:768px){
+
+  body {
+    display: flex;
+    font-size: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .Cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5%;
+    padding: 3%;
+  }
+
+  .nvMenu {
+    margin-right: 18%;
+  }
+  
+  .sobre {
+    margin: 15%;
+  }
+
+  .frmList{
+    height: 560px;
+  }
+
+  .boxBtnAndTxtInput {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   
+  }
+
+  .btn {
+    width: 25%;
+    margin: 1% auto;
+  }
+
+  #textTarefaValor {
+    margin-top: 1%;
+  }
+
+  .ToDoList {
+    width: 630px;
+    margin-top: 3%;
+    border: 1px solid #000000;
+  }
+
+  .rodape {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* flex-grow: 3; */
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    margin: 0 auto;
+  }
+
+}  

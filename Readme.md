@@ -1,13 +1,17 @@
-# To do list 
+# toDoIst 
 ## Objetivos:
 - [X] Criar uma lista de Afazeres utilizando HTML e CSS
 - [X] Utilizar o JS para fazer a inclusão e remoção de itens dinamicamente
-- [ ] Utilizar a interface Window.localStorage( ) para armazenar os dados.
-- [ ] Fazer o estilo da Página no CSS.
+- [x] Fazer o estilo da Página no CSS.
 
 ## Mobile compatibility
 ### Max width screen Mobile:
-- **425px** 
+- **<=425px** 
   - [ ] to do 
-  - [X] doing
-  - [ ] done
+  - [ ] doing
+  - [x] done
+
+- **>425px** 
+  - [ ] to do 
+  - [ ] doing
+  - [x] done
