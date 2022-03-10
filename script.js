@@ -64,17 +64,15 @@ Questão:
 "Como saber se um elemento foi clicado usando Javascript puro"
 Link da pergunta respondida <https://pt.stackoverflow.com/questions/11365/como-saber-se-um-elemento-foi-clicado-usando-javascript-puro#:~:text=Uma%20outra%20op%C3%A7%C3%A3o%20%C3%A9%20adicionar,target%20.&text=Utilize%20o%20document.>
 */
-// window.onload = function() {
-// 	var allTasks = document.getElementsByTagName("li");
+window.onload = function() {
+	var allTasks = document.getElementsByTagName("li");
   
-// 	for(var i=0; i<allTasks.length; i++) {
-// 		allTasks[i].addEventListener("click", function() {
-//         // var selecionada = allTasks[i];
-//         // selecionada.classList.toggle("line-through")
-//       // this.classList.toggle("tksline-through");
-//       this.style.backgroundColor = "#ccc";
-//       // .toggle("tksline-through");
-// 			});
-// 		}
-// 	}    
+	for(var i=0; i<allTasks.length; i++) {
+		allTasks[i].addEventListener("click", function() {
+      
+    alert('o elemento foi clicado');
+    console.log("o elemento foi clicado")
+    });
+  }
+	}    
   
