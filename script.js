@@ -6,26 +6,36 @@ var btnInsert = document.getElementById("btnInserir");
 var btnRemove = document.getElementById("btnRemover");
 var cont = 0; //Variárivel para contar os elementos Filhos de #itens
 
-btnInsert.addEventListener("click", () => {
-  //criação de objetos para instanciar alguns elementos da página Index.html
+var tasks = [];
 
-  
-  
-  //seleciona o <input> "type=text" #textTarefaValor
+function addTask(text) {
+  tasks.push(text);
+  localStorage.setItem("tasks",JSON.stringify(tasks))
+
+  var storedNames = JSON.parse(localStorage.getItem("tasks")); 
+
+}
+
+
+
+btnInsert.addEventListener("click", () => {
+ 
+
   const txtTaskValue = document.getElementById("textTarefaValor");
 
-  //cria uma variável que recebe o elemento <p>
-  const task = document.createElement("li");
 
-  //recuperando o valor do input  
-  task.innerHTML = " - " +
-  txtTaskValue.value;
+  const task = document.createElement("li");
+  
+  addTask("-" + txtTaskValue.value);
+  // task.innerHTML = " - " +
+  // txtTaskValue.value;
 
   
-  //adiciona filhos a div #itens
-  document.getElementById("itens").appendChild(task);
-  cont++; //adiona mais um na contagem;
-  // console.log(document.getElementById("itens").childNodes.length);
+
+  // //adiciona filhos a div #itens
+  // document.getElementById("itens").appendChild(addTask.storedNames);
+  // cont++; //adiona mais um na contagem;
+  // // console.log(document.getElementById("itens").childNodes.length);
 })
 
 /*
