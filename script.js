@@ -5,6 +5,7 @@ Botão para adicionar itens
 var btnInsert = document.getElementById("btnInserir");
 var btnRemove = document.getElementById("btnRemover");
 var cont = 0; //Variárivel para contar os elementos Filhos de #itens
+i = 0;
 
 var tasks = [];
 
@@ -12,8 +13,16 @@ function addTask(text) {
   tasks.push(text);
   localStorage.setItem("tasks",JSON.stringify(tasks))
 
-  var storedNames = JSON.parse(localStorage.getItem("tasks")); 
+   storedNames = JSON.parse(localStorage.getItem("tasks")); 
 
+}
+
+
+
+function update(task) {
+  task.innerHTML = storedNames[i];
+  document.getElementById("itens").appendChild(task);
+  i++;
 }
 
 
@@ -26,21 +35,13 @@ btnInsert.addEventListener("click", () => {
 
   const task = document.createElement("li");
   
-  addTask("-" + txtTaskValue.value);
-  // task.innerHTML = " - " +
-  // txtTaskValue.value;
-
+  addTask("- " + txtTaskValue.value);
+  update(task);
+ 
   
-
-  // //adiciona filhos a div #itens
-  // document.getElementById("itens").appendChild(addTask.storedNames);
-  // cont++; //adiona mais um na contagem;
-  // // console.log(document.getElementById("itens").childNodes.length);
 })
 
-/*
-botão para remover itens
-*/
+
 
 //arrow function https://www.youtube.com/watch?v=S5Mn0qQzJ-0
 btnRemove.addEventListener("click",() => {
