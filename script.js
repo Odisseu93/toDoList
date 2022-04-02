@@ -21,6 +21,7 @@ if (storedNames != null)
 //inserir elemento na página
 function update() {
   const task = document.createElement("li");
+  task.setAttribute(`class`,`tks`);
   task.innerHTML = tasks[i];
   document.getElementById("itens").appendChild(task);
 
