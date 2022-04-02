@@ -426,7 +426,7 @@ Desktop
   }
 
   #textTarefaValor {
-    width: 100%;
+    width: 25%;
   }
 
   #textTarefaValor::placeholder {
@@ -442,7 +442,7 @@ Desktop
     font-size: 1.3em;
     border: 1px solid #000000;
     margin: 2% auto;
-    width: 60%;
+    width: 30%;
   }
 
   .itens li {
