@@ -3,120 +3,26 @@
   font-size: 1.5em;
   background: #FEE9CC;
   color: #000000;
+  box-sizing: border-box;
 }
-
-/*
-Desktop
-*/
-@media(min-width:1024px) {
-
-  .sobre {
-    text-align: center;
-  }
-
-  main {
-    width: 50%;
-    margin: 0 auto;
-  }
-}
-
-/*
-tablet
-*/
-@media(min-width:768px)and(max-width:900px) {
-  body {
-    background-image: url("fundo.png");
-  }
-
-  h1 {
-    font-weight: bold;
-    text-align: center;
-  }
-
-  .Cabecalho {
-    background: linear-gradient(90deg, white 3%, #FFF6BA);
-    height: 10%;
-  }
-
-  .nvMenu a {
-    text-decoration: none;
-    color: #000000;
-    font-size: 30px;
-  }
-
-  .nvMenu a:hover {
-
-    color: orange;
-
-  }
-
-  .nvMenu a:active {
-    color: blue;
-  }
-
-  .sobre {
-    height: 40%;
-  }
-
-  main {
-    height: 60%;
-  }
-
-  #textTarefaValor {
-    font-size: 1em;
-  }
-
-  .btn {
-    font-size: 0.8em;
-    ;
-  }
-
-  .ToDoList {
-    font-size: 1.3em;
-  }
-
-  .itens li {
-    background: #F1C4A5;
-    border-bottom: 1px double #000000;
-
-  }
-
-  .hdrItens {
-    background: #65350f;
-    color: white;
-  }
-
-  .rodape {
-    background: linear-gradient(180deg, white, #FFF6BA);
-    ;
-    width: 100%;
-    height: 10%;
-  }
-
-}
-
-/*
-CSS Selector Reference
- https://www.w3schools.com/cssref/css_selectors.asp
-*/
-
 
 /*
 mobile
 */
 
-/*
-Telas até de 425px
-*/
-
-@media(min-width:320px) {
+@media(min-width:320px) and (max-width:400px) {
 
 
   body {
     display: flex;
     font-size: 50px;
     flex-direction: column;
-    height: 967px;
+    height: 100%;
+    background-image: url("fundo.png");
+  }
+
+  .nvMenu a {
+    display: none;
   }
 
   .Cabecalho {
@@ -124,7 +30,7 @@ Telas até de 425px
     width: 100%;
     flex-direction: column;
     height: 35%;
-    padding: 3%;
+    padding-bottom: 3%;
     text-align: center;
     align-items: center;
     margin-bottom: 3%;
@@ -132,7 +38,8 @@ Telas até de 425px
   }
 
   .sobre {
-    width: 100%;
+    padding-top: 2em;
+    width: 80%;
     display: flex;
     flex-direction: column;
     padding-left: 1em;
@@ -142,7 +49,11 @@ Telas até de 425px
 
   main {
     padding-top: 2em;
-    height: 60%;
+    padding-left: 1em;
+    width: 80%;
+    align-items: center;
+    height: 61%;
+    background-image: url("fundo.png");
   }
 
   .frmList {
@@ -182,7 +93,7 @@ Telas até de 425px
   }
 
   #textTarefaValor {
-    width: 90%;
+    width: 100%;
     font-size: 0.8em;
   }
 
@@ -202,33 +113,30 @@ Telas até de 425px
     color: white;
   }
 
-  .rodape {
-    background: linear-gradient(180deg, white, #FFF6BA);
-    ;
+  .imgLogo {
+    width: 30%;
   }
 
   .rodape {
-    width: 100%;
-    height: 20%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 1%;
-    justify-content: end;
+    width: 100%;
+    height: 3%;
+    padding-top: 1%;
     align-items: center;
-    padding: 3%;
-    margin-bottom: -10%;
+    background: linear-gradient(180deg, white, #FFF6BA);
   }
 
 
 }
 
-@media(min-width:426px) {
+@media(min-width:425px) and (max-width:600px) {
 
   body {
     display: flex;
     font-size: 50px;
     flex-direction: column;
-    height: 967px;
+    height: 100%;
   }
 
   .Cabecalho {
@@ -242,6 +150,9 @@ Telas até de 425px
     background: linear-gradient(90deg, white 3%, #FFF6BA);
   }
 
+  .nvMenu a {
+    display: none;
+  }
 
   .sobre {
     width: 100%;
@@ -255,6 +166,7 @@ Telas até de 425px
   main {
     padding-top: 2em;
     height: 60%;
+    width: 95%;
   }
 
   .frmList {
@@ -314,17 +226,247 @@ Telas até de 425px
     color: white;
   }
 
+  .imgLogo {
+    width: 30%
+  }
+
   .rodape {
     width: 100%;
     height: 20%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 1%;
-    justify-content: end;
+    padding-top: 1%;
     align-items: center;
-    padding: 3%;
-    margin-bottom: -10%;
     background: linear-gradient(180deg, white, #FFF6BA);
-    ;
+  }
+
+}
+
+
+/*
+tablet
+*/
+@media(min-width:768px) and (max-width:900px) {
+  body {
+    background-image: url("fundo.png");
+    width: 100%;
+  }
+
+  h1 {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .Cabecalho {
+    display: flex;
+    background: linear-gradient(90deg, white 3%, #FFF6BA);
+    height: 10%;
+  }
+
+  .hdrLogo {
+    margin: 0 auto;
+  }
+
+  .nvMenu a {
+    display: none;
+    text-decoration: none;
+    color: #000000;
+    font-size: 30px;
+  }
+
+  .nvMenu a:hover {
+
+    color: orange;
+
+  }
+
+  .nvMenu a:active {
+    color: blue;
+  }
+
+  .sobre {
+    height: 40%;
+    width: 90%;
+    margin: 15% 1%;
+  }
+
+  main {
+    height: 80%;
+    width: 90%;
+    margin: 0% 1%;
+  }
+
+  #textTarefaValor {
+    font-size: 1em;
+  }
+
+  .boxBtnAndTxtInput {
+    display: flex;
+    justify-content: center;
+  }
+
+  #textTarefaValor {
+    width: 100%;
+  }
+
+  #textTarefaValor::placeholder {
+    text-align: center;
+  }
+
+  .btn {
+    font-size: 0.8em;
+    margin-left: 1%;
+  }
+
+  .ToDoList {
+    font-size: 1.3em;
+    border: 1px solid #000000;
+    margin: 2% 0;
+  }
+
+  .itens li {
+    background: #F1C4A5;
+    border-bottom: 1px double #000000;
+    margin-left: 0.3%;
+  }
+
+  .hdrItens {
+    background: #65350f;
+    color: white;
+  }
+
+  .rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1%;
+    background: linear-gradient(180deg, white, #FFF6BA);
+    width: 100%;
+    height: 10%;
+  }
+
+  .imgLogo {
+    width: 15%
+  }
+
+}
+
+/*
+Desktop
+*/
+@media(min-width:1024px) {
+
+  body {
+    background-image: url("fundo.png");
+    width: 100%;
+  }
+
+  h1 {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .Cabecalho {
+    display: flex;
+    justify-content: space-evenly;
+    background: linear-gradient(90deg, white 3%, #FFF6BA);
+    height: 10%;
+  }
+
+  .nvMenu {
+    display: flex;
+    align-items: center;
+  }
+
+  .nvMenu a {
+    text-decoration: none;
+    padding: 9%;
+    flex-direction: column;
+    align-items: center;
+    color: blue;
+    font-size: 30px;
+  }
+
+  .nvMenu a:hover {
+
+    color: orange;
+
+  }
+
+  .nvMenu a:active {
+    color: blue;
+  }
+
+  .sobre {
+    height: 40%;
+    width: 90%;
+    margin: 9% auto;
+  }
+
+  .sobre p {
+    text-align: center;
+  }
+
+  main {
+    height: 80%;
+    width: 50%;
+    margin: 1% auto;
+    background: #FFF6BA;
+    padding: 1%;
+    border: 3px dashed #000000;
+  }
+
+  #textTarefaValor {
+    font-size: 1em;
+  }
+
+  .boxBtnAndTxtInput {
+    display: flex;
+    justify-content: center;
+  }
+
+  #textTarefaValor {
+    width: 100%;
+  }
+
+  #textTarefaValor::placeholder {
+    text-align: center;
+  }
+
+  .btn {
+    font-size: 0.8em;
+    margin-left: 1%;
+  }
+
+  .ToDoList {
+    font-size: 1.3em;
+    border: 1px solid #000000;
+    margin: 2% auto;
+    width: 60%;
+  }
+
+  .itens li {
+    background: #F1C4A5;
+    border-bottom: 1px double #000000;
+    margin-left: 0.3%;
+  }
+
+  .hdrItens {
+    background: #65350f;
+    color: white;
+  }
+
+  .rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1%;
+    background: linear-gradient(180deg, white, #FFF6BA);
+    width: 100%;
+    height: 10%;
+  }
+
+  .imgLogo {
+    width: 8%
   }
 }
