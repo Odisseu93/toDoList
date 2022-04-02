@@ -8,6 +8,7 @@ storedNames = 0;
 
 var tasks = [];
 
+//resgatar valores salvos no LocalStorage
 storedNames = JSON.parse(localStorage.getItem("tasks"));
 if (storedNames != null)
   storedNames.forEach(function (element, index) {
@@ -16,6 +17,8 @@ if (storedNames != null)
     update(i);
   });
 
+
+//inserir elemento na página
 function update() {
   const task = document.createElement("li");
   task.innerHTML = tasks[i];
@@ -23,6 +26,7 @@ function update() {
 
 }
 
+//inserir tarefa
 const insertTask = btnInsert.addEventListener("click", () => {
 
   const txtTaskValue = document.getElementById("textTarefaValor");
@@ -32,12 +36,14 @@ const insertTask = btnInsert.addEventListener("click", () => {
   save(text, tasks)
 })
 
+//salvar na tarefa no localStorage
 function save() {
   tasks.push(text);
   localStorage.setItem("tasks", JSON.stringify(tasks))
   setTimeout(() => window.location.reload(), 500);
 }
 
+//remover tarefa
 const removeTask = btnRemove.addEventListener("click", () => {
   const list = document.getElementById("itens");
   document.getElementById("itens").removeChild(list.lastChild);
@@ -45,4 +51,5 @@ const removeTask = btnRemove.addEventListener("click", () => {
   tasks.splice(-1, 1);
   localStorage.setItem("tasks", JSON.stringify(tasks))
 })
+
 
