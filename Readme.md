@@ -36,5 +36,9 @@
 
 - site: [Array forEach()](https://www.w3schools.com/jsref/jsref_forEach.asp)
   - Vídeo: [Using JavaScript forEach to Loop over an Array](https://www.youtube.com/watch?v=zF48zb631Lg)
+
+- site: [CSS Selector Reference](https://www.w3schools.com/cssref/css_selectors.asp)
+
+- site: [CSS Media Queries - Examples](https://www.w3schools.com/Css/css3_mediaqueries_ex.asp)
   
 - vídeo [arrow function](https://www.youtube.com/watch?v=S5Mn0qQzJ-0)
