@@ -32,24 +32,22 @@ function update() {
 
   btnRemoveTask.addEventListener('click', () => {
     tks = document.querySelector('.tks');
-    tks.remove();
     const li = btnRemoveTask.parentElement;
 
 
 
-    let endRemove
+    let itemRemove
     // map para encontrar o index da tarefa  
     tasks.map((element, index) => {
       if (element == li.textContent)
-        endRemove = index;
-      if (index === 0)
-        endRemove = 1;
+        itemRemove = index;
     })
 
     // removendo o tarefa do array e localstorage 
-    tasks.splice(0, endRemove);
+    // tks.remove();
+    tasks.splice(itemRemove, 1);
     localStorage.setItem("tasks", JSON.stringify(tasks));
-
+    setTimeout(() => window.location.reload(), 500);
   });
 
 
