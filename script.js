@@ -25,9 +25,10 @@ function update() {
   */
   const btnRemoveTask = document.createElement("input");
   btnRemoveTask.setAttribute("type", "button");
-  btnRemoveTask.value = "🗑";
+  btnRemoveTask.value = "X";
   btnRemoveTask.style.width = "30px";
   btnRemoveTask.style.height = "30px";
+  btnRemoveTask.style.marginLeft = "5px";
 
   btnRemoveTask.addEventListener('click', () => {
     tks = document.querySelector('.tks');
