@@ -2,7 +2,6 @@
 Botões
 */
 var btnInsert = document.getElementById("btnInserir");
-var btnRemove = document.getElementById("btnRemover");
 
 storedNames = 0;
 
@@ -21,15 +20,46 @@ if (storedNames != null)
 //inserir elemento na página
 function update() {
   const task = document.createElement("li");
-  task.setAttribute(`class`,`tks`);
+  /*
+  adicionando o botão para remover a tarefa
+  */
+  const btnRemoveTask = document.createElement("input");
+  btnRemoveTask.setAttribute("type", "button");
+  btnRemoveTask.value = "🗑";
+  btnRemoveTask.style.width = "30px";
+  btnRemoveTask.style.height = "30px";
+
+  btnRemoveTask.addEventListener('click', () => {
+    tks = document.querySelector('.tks');
+    tks.remove();
+    const li = btnRemoveTask.parentElement;
+
+
+
+    let endRemove
+    // map para encontrar o index da tarefa  
+    tasks.map((element, index) => {
+      if (element == li.textContent)
+        endRemove = index;
+      if (index === 0)
+        endRemove = 1;
+    })
+
+    // removendo o tarefa do array e localstorage 
+    tasks.splice(0, endRemove);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+
+  });
+
+
+  task.setAttribute(`class`, `tks`);
   task.innerHTML = tasks[i];
   document.getElementById("itens").appendChild(task);
-
+  task.appendChild(btnRemoveTask);
 }
 
 //inserir tarefa
 const insertTask = btnInsert.addEventListener("click", () => {
-
   const txtTaskValue = document.getElementById("textTarefaValor");
   text = "- " + txtTaskValue.value;
 
@@ -44,13 +74,5 @@ function save() {
   setTimeout(() => window.location.reload(), 500);
 }
 
-//remover tarefa
-const removeTask = btnRemove.addEventListener("click", () => {
-  const list = document.getElementById("itens");
-  document.getElementById("itens").removeChild(list.lastChild);
-  console.log(tasks)
-  tasks.splice(-1, 1);
-  localStorage.setItem("tasks", JSON.stringify(tasks))
-})
 
 
