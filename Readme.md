@@ -1,6 +1,6 @@
 # To Do List 
 
-### site: https://odisseu93.github.io/toDoList/
+### [Deployment](https://odisseu93.github.io/toDoList/)
 
 ## Objetivos:
 - [X] Criar uma lista de Afazeres utilizando HTML e CSS
