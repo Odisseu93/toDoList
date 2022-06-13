@@ -1,6 +1,6 @@
 # To Do List 
 
-### [Deployment](https://to-do-list-exknz6cw8-odisseu93.vercel.app/)
+### [Deployment](https://to-do-list-h7tdw4l9e-odisseu93.vercel.app)
 
 ## Objetivos:
 - [X] Criar uma lista de Afazeres utilizando HTML e CSS
@@ -29,6 +29,12 @@
   - [ ] to do 
   - [ ] doing
   - [x] done
+
+## Updates:
+```diff 
+! - 13/06/2022 adicionado um novo botão para excluir as tarefas !
+! - 14/06/2022 adicionado uma "KeyboardEvent", para adicionar as tarefas apertando a tecla enter !
+```
 
 ## Materias de estudo
 - site: [Documentação localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
