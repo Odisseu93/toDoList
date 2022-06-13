@@ -58,13 +58,26 @@ function update() {
 }
 
 //inserir tarefa
-const insertTask = btnInsert.addEventListener("click", () => {
+btnInsert.addEventListener("click", () => {
   const txtTaskValue = document.getElementById("textTarefaValor");
   text = "- " + txtTaskValue.value;
 
   console.log(tasks)
   save(text, tasks)
 })
+
+// adiciona a tarefa, caso seja apertado a tecla Enter no input das tarefas
+const taskInput = document.querySelector('#textTarefaValor')
+taskInput.addEventListener("keypress", (e) => {
+  if(e.key === 'Enter'){
+  const txtTaskValue = document.getElementById("textTarefaValor");
+  text = "- " + txtTaskValue.value;
+
+  console.log(tasks)
+  save(text, tasks)
+}
+})
+
 
 //salvar na tarefa no localStorage
 function save() {
