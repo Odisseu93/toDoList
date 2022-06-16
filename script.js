@@ -44,7 +44,6 @@ function update() {
     })
 
     // removendo o tarefa do array e localstorage 
-    // tks.remove();
     tasks.splice(itemRemove, 1);
     localStorage.setItem("tasks", JSON.stringify(tasks));
     setTimeout(() => window.location.reload(), 500);
@@ -56,6 +55,20 @@ function update() {
   document.getElementById("itens").appendChild(task);
   task.appendChild(btnRemoveTask);
 }
+
+// adicionar o efeito line-through nas tarefas feitas
+const taskLi = document.querySelector('.itens').children;
+for (let i = 0; i < taskLi.length; i++) {
+  const doneTask = document.createElement('input');
+  doneTask.setAttribute('type', 'checkbox')
+  doneTask.setAttribute('class', 'chk-done-tks')
+  taskLi[i].append(doneTask)
+  text = doneTask.addEventListener('change', () => taskLi[i].classList.toggle('line-through'));
+}
+
+console.log(taskLi.length)
+
+// taskLi[].classList.toggle('line-through')
 
 //inserir tarefa
 btnInsert.addEventListener("click", () => {
@@ -69,13 +82,13 @@ btnInsert.addEventListener("click", () => {
 // adiciona a tarefa, caso seja apertado a tecla Enter no input das tarefas
 const taskInput = document.querySelector('#textTarefaValor')
 taskInput.addEventListener("keypress", (e) => {
-  if(e.key === 'Enter'){
-  const txtTaskValue = document.getElementById("textTarefaValor");
-  text = "- " + txtTaskValue.value;
+  if (e.key === 'Enter') {
+    const txtTaskValue = document.getElementById("textTarefaValor");
+    text = "- " + txtTaskValue.value;
 
-  console.log(tasks)
-  save(text, tasks)
-}
+    console.log(tasks)
+    save(text, tasks)
+  }
 })
 
 

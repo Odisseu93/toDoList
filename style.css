@@ -6,6 +6,18 @@
   box-sizing: border-box;
 }
 
+
+.line-through {
+  text-decoration: line-through;
+  color: tomato;
+}
+
+.chk-done-tks {
+  width: 30px;
+  height: 20px;
+  margin-left: 30px;
+}
+
 /*
 mobile
 */
