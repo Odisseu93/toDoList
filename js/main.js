@@ -10,17 +10,17 @@ btnInserir.addEventListener('click', () => {
   if (valorInput != '') {
     const tarefa = new Tarefa(input);
     const tarefaHTML = `
-  <li class=\"tks\"> - ${tarefa.mensagem}</li> 
+  <li class=${tarefa.class}>- ${tarefa.mensagem} </li> 
   `
-
-    atualizarUl(tarefaHTML);
-
-    input.value = ''; //limpando o input 
-    input.focus(); //autofocus
-  } else {
-    const erroEntradaIvalida = 'insira um valor na caixa de entrada !';
-    alert(erroEntradaIvalida); //provisório
-  }
+  
+  atualizarUl(tarefaHTML);
+  
+  input.value = ''; //limpando o input 
+  input.focus(); //autofocus
+} else {
+  const erroEntradaIvalida = 'insira um valor na caixa de entrada !';
+  alert(erroEntradaIvalida); //provisório
+}
 });
 
 
@@ -28,14 +28,13 @@ btnInserir.addEventListener('click', () => {
 input.addEventListener('keypress', (e) => {
   const valorInput = e.target.value;
   const tecla = e.key;
-
+  
   if ((tecla === 'Enter') && (valorInput != '')) { // insere uma tarefa caso o input não esteja vazio
     e.preventDefault();
     const tarefa = new Tarefa(input);// instancia da classe Tarefa
     const tarefaHTML = `
-    <li class=\"tks\"> - ${tarefa.mensagem}</li> 
+    <li class=${tarefa.class}>- ${tarefa.mensagem} </li> 
     `
-
     atualizarUl(tarefaHTML);
 
     input.value = ''; //limpando o input 
@@ -79,7 +78,7 @@ toDoList.addEventListener("click", (e) => {
 
 //função para atulizar os dados no localStorage()
 function atualizarLocalStorage() {
-  const tarefasHTML = document.querySelectorAll('.tks');
+  const tarefasHTML = document.querySelectorAll('.ToDoList__lista-tarefas__item');
   const tarefasArray = []
   tarefasHTML.forEach(tarefa => {
     tarefasArray.push(tarefa.outerHTML);
