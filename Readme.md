@@ -33,6 +33,12 @@
 ```diff 
 ! - 13/06/2022 adicionado um novo botão para excluir as tarefas !
 ! - 14/06/2022 adicionado uma "KeyboardEvent", para adicionar as tarefas apertando a tecla enter !
+! - 16/07/2022 reorganização dos arquivos JS e CSS
+! - 16/07/2022 refatoração de todo o código Javascript
+! - 17/07/2022 alteração no comportamento de algumas funções
+! - 17/07/2022 alteração do HTML
+! - 17/07/2022 criação de novas funções
+! - 17/07/2022 update no CSS
 ```
 
 ## Materias de estudo
