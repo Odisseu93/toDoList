@@ -33,6 +33,16 @@ body {
   padding: 20px;
 }
 
+.utilizacao__lista-Acoes {
+  display: none;
+}
+
+.utilizacao__titulo:hover {
+  cursor: help;
+  color: #1A1AF7;
+  transform: scale(1.3);
+}
+
 .Cabecalho {
   display: flex;
   justify-content: space-evenly;
@@ -60,9 +70,7 @@ body {
 }
 
 .nvMenu a:hover {
-
   color: orange;
-
 }
 
 .nvMenu a:active {
@@ -165,7 +173,6 @@ body {
 }
 
 .ToDoList__lista-tarefas__item:hover {
-  /* border: 1px solid #000; */
   cursor: pointer;
   opacity: 70%;
   color: #1A1AF7;
@@ -176,7 +183,6 @@ body {
   color: green;
 }
 
-.fadeOut {
-  opacity: 0;
-  transition: 0.5s;
+.mostrar-display {
+  display: block;
 }
