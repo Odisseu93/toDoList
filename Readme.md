@@ -1,6 +1,5 @@
 # To Do List 
 
-### [Deployment](https://to-do-list-h7tdw4l9e-odisseu93.vercel.app)
 
 ## Objetivos:
 - [X] Criar uma lista de Afazeres utilizando HTML e CSS
