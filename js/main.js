@@ -1,5 +1,5 @@
 const input = document.querySelector('#textTarefaValor');
-const toDoList = document.querySelector('ul');
+const toDoList = document.querySelector('#lista_tarefas');
 const btnInserir = document.querySelector('#btnInserir');
 
 
