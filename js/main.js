@@ -40,7 +40,7 @@ input.addEventListener('keypress', (e) => {
 
     input.value = ''; //limpando o input 
     input.focus(); //autofocus
-  } else {
+  } else if ((tecla === 'Enter') && (valorInput === '')) {
     const erroEntradaIvalida = 'insira um valor na caixa de entrada !';
     /*
     exibindo como erro no console.log
