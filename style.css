@@ -6,479 +6,113 @@
   box-sizing: border-box;
 }
 
+body {
+  /* background-image: url("fundo.png"); */
+  background: #FADF5A;
+  width: 100vw;
+  height: 100vh;
+}
+
+.utilizacao {
+  text-align: center;
+  margin: 30px auto;
+  max-width: 350px;
+  background: linear-gradient(180deg, white, #FFF6BA);
+  padding: 10px;
+}
+
+.utilizacao__titulo {
+  font-weight: 800;
+}
+
+.utilizacao__lista-Acoes__item {
+  padding: 10px;
+}
+
+.Cabecalho {
+  display: flex;
+  justify-content: space-evenly;
+  background: linear-gradient(90deg, white 3%, #FFF6BA);
+  height: 10%;
+}
+
+.nvMenu {
+  display: flex;
+  align-items: center;
+}
+
+.nvMenu a {
+  text-decoration: none;
+  padding: 9%;
+  flex-direction: column;
+  align-items: center;
+  color: blue;
+  font-size: 30px;
+}
+
+.nvMenu a:hover {
+
+  color: orange;
+
+}
+
+.nvMenu a:active {
+  color: blue;
+}
+
+#textTarefaValor {
+  min-width: 250px;
+  font-size: 1em;
+}
+
+.boxBtnAndTxtInput {
+  display: flex;
+  justify-content: center;
+}
+
+#textTarefaValor {
+  width: 25%;
+}
+
+#textTarefaValor::placeholder {
+  text-align: center;
+}
+
+.btn {
+  font-size: 0.8em;
+  margin-left: 1%;
+}
+
+.ToDoList {
+  font-size: 1.3em;
+  border: 1px solid #000000;
+  margin: 2% auto;
+  max-width: 360px;
+}
+
+.ToDoList__lista-tarefas {
+  background: #F1C4A5;
+  border-bottom: 1px double #000000;
+  margin-left: 1%;
+  max-width: 360px;
+}
+
+.ToDoList__hdr {
+  text-align: center;
+  background: #65350f;
+  color: white;
+}
+
+.ToDoList__lista-tarefas__item {
+  border: 1px solid #000;
+}
 
 .line-through {
   text-decoration: line-through;
-  color: tomato;
+  color: green;
 }
 
-.chk-done-tks {
-  width: 30px;
-  height: 20px;
-  margin-left: 30px;
-}
-
-/*
-mobile
-*/
-
-@media(min-width:320px) and (max-width:400px) {
-
-
-  body {
-    display: flex;
-    font-size: 50px;
-    flex-direction: column;
-    height: 100%;
-    background-image: url("fundo.png");
-  }
-
-  .nvMenu a {
-    display: none;
-  }
-
-  .Cabecalho {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    height: 35%;
-    padding-bottom: 3%;
-    text-align: center;
-    align-items: center;
-    margin-bottom: 3%;
-    background: linear-gradient(90deg, white 3%, #FFF6BA);
-  }
-
-  .sobre {
-    padding-top: 2em;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    padding-left: 1em;
-    padding-right: 2%;
-    box-sizing: border-box;
-  }
-
-  main {
-    padding-top: 2em;
-    padding-left: 1em;
-    width: 80%;
-    align-items: center;
-    height: 61%;
-    background-image: url("fundo.png");
-  }
-
-  .frmList {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5%;
-    flex-grow: 4;
-    box-sizing: border-box;
-  }
-
-  .ToDoList {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 5%;
-  }
-
-  .itens li {
-    text-align: left;
-    margin-left: 1%;
-  }
-
-  .boxBtnAndTxtInput {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    align-items: center;
-
-  }
-
-  .btn {
-    width: 30%;
-    margin: 3%;
-  }
-
-  #textTarefaValor {
-    width: 100%;
-    font-size: 0.8em;
-  }
-
-  .ToDoList {
-    width: 90%;
-    border: 1px solid #000000;
-  }
-
-  .itens li {
-    background: #F1C4A5;
-    border-bottom: 1px double #000000;
-
-  }
-
-  .hdrItens {
-    background: #65350f;
-    color: white;
-  }
-
-  .imgLogo {
-    width: 30%;
-  }
-
-  .rodape {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 3%;
-    padding-top: 1%;
-    align-items: center;
-    background: linear-gradient(180deg, white, #FFF6BA);
-  }
-
-
-}
-
-@media(min-width:425px) and (max-width:600px) {
-
-  body {
-    display: flex;
-    font-size: 50px;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .Cabecalho {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    height: 30%;
-    text-align: center;
-    align-items: center;
-    margin-bottom: 3%;
-    background: linear-gradient(90deg, white 3%, #FFF6BA);
-  }
-
-  .nvMenu a {
-    display: none;
-  }
-
-  .sobre {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-left: 1em;
-    padding-right: 2%;
-    box-sizing: border-box;
-  }
-
-  main {
-    padding-top: 2em;
-    height: 60%;
-    width: 95%;
-  }
-
-  .frmList {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5%;
-    flex-grow: 4;
-    box-sizing: border-box;
-  }
-
-  .ToDoList {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 5%;
-  }
-
-  .itens li {
-    text-align: left;
-    margin-left: 1%;
-  }
-
-  .boxBtnAndTxtInput {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    align-items: center;
-
-  }
-
-  .btn {
-    width: 30%;
-    margin: 1%;
-  }
-
-  #textTarefaValor {
-    width: 90%;
-    font-size: 0.8em;
-  }
-
-  .ToDoList {
-    width: 90%;
-    border: 1px solid #000000;
-  }
-
-  .itens li {
-    background: #F1C4A5;
-    border-bottom: 1px double #000000;
-
-  }
-
-  .hdrItens {
-    background: #65350f;
-    color: white;
-  }
-
-  .imgLogo {
-    width: 30%
-  }
-
-  .rodape {
-    width: 100%;
-    height: 20%;
-    display: flex;
-    flex-direction: column;
-    padding-top: 1%;
-    align-items: center;
-    background: linear-gradient(180deg, white, #FFF6BA);
-  }
-
-}
-
-
-/*
-tablet
-*/
-@media(min-width:768px) and (max-width:900px) {
-  body {
-    background-image: url("fundo.png");
-    width: 100%;
-  }
-
-  h1 {
-    font-weight: bold;
-    text-align: center;
-  }
-
-  .Cabecalho {
-    display: flex;
-    background: linear-gradient(90deg, white 3%, #FFF6BA);
-    height: 10%;
-  }
-
-  .hdrLogo {
-    margin: 0 auto;
-  }
-
-  .nvMenu a {
-    display: none;
-    text-decoration: none;
-    color: #000000;
-    font-size: 30px;
-  }
-
-  .nvMenu a:hover {
-
-    color: orange;
-
-  }
-
-  .nvMenu a:active {
-    color: blue;
-  }
-
-  .sobre {
-    height: 40%;
-    width: 90%;
-    margin: 15% 1%;
-  }
-
-  main {
-    height: 80%;
-    width: 90%;
-    margin: 0% 1%;
-  }
-
-  #textTarefaValor {
-    font-size: 1em;
-  }
-
-  .boxBtnAndTxtInput {
-    display: flex;
-    justify-content: center;
-  }
-
-  #textTarefaValor {
-    width: 100%;
-  }
-
-  #textTarefaValor::placeholder {
-    text-align: center;
-  }
-
-  .btn {
-    font-size: 0.8em;
-    margin-left: 1%;
-  }
-
-  .ToDoList {
-    font-size: 1.3em;
-    border: 1px solid #000000;
-    margin: 2% 0;
-  }
-
-  .itens li {
-    background: #F1C4A5;
-    border-bottom: 1px double #000000;
-    margin-left: 0.3%;
-  }
-
-  .hdrItens {
-    background: #65350f;
-    color: white;
-  }
-
-  .rodape {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1%;
-    background: linear-gradient(180deg, white, #FFF6BA);
-    width: 100%;
-    height: 10%;
-  }
-
-  .imgLogo {
-    width: 15%
-  }
-
-}
-
-/*
-Desktop
-*/
-@media(min-width:1024px) {
-
-  body {
-    background-image: url("fundo.png");
-    width: 100%;
-  }
-
-  h1 {
-    font-weight: bold;
-    text-align: center;
-  }
-
-  .Cabecalho {
-    display: flex;
-    justify-content: space-evenly;
-    background: linear-gradient(90deg, white 3%, #FFF6BA);
-    height: 10%;
-  }
-
-  .nvMenu {
-    display: flex;
-    align-items: center;
-  }
-
-  .nvMenu a {
-    text-decoration: none;
-    padding: 9%;
-    flex-direction: column;
-    align-items: center;
-    color: blue;
-    font-size: 30px;
-  }
-
-  .nvMenu a:hover {
-
-    color: orange;
-
-  }
-
-  .nvMenu a:active {
-    color: blue;
-  }
-
-  .sobre {
-    height: 40%;
-    width: 90%;
-    margin: 9% auto;
-  }
-
-  .sobre p {
-    text-align: center;
-  }
-
-  main {
-    height: 80%;
-    width: 50%;
-    margin: 1% auto;
-    background: #FFF6BA;
-    padding: 1%;
-    border: 3px dashed #000000;
-  }
-
-  #textTarefaValor {
-    font-size: 1em;
-  }
-
-  .boxBtnAndTxtInput {
-    display: flex;
-    justify-content: center;
-  }
-
-  #textTarefaValor {
-    width: 25%;
-  }
-
-  #textTarefaValor::placeholder {
-    text-align: center;
-  }
-
-  .btn {
-    font-size: 0.8em;
-    margin-left: 1%;
-  }
-
-  .ToDoList {
-    font-size: 1.3em;
-    border: 1px solid #000000;
-    margin: 2% auto;
-    width: 30%;
-  }
-
-  .itens li {
-    background: #F1C4A5;
-    border-bottom: 1px double #000000;
-    margin-left: 0.3%;
-  }
-
-  .hdrItens {
-    background: #65350f;
-    color: white;
-  }
-
-  .rodape {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1%;
-    background: linear-gradient(180deg, white, #FFF6BA);
-    width: 100%;
-    height: 10%;
-  }
-
-  .imgLogo {
-    width: 8%
-  }
+.fadeOut {
+  opacity: 0;
+  transition: 0.5s;
 }
