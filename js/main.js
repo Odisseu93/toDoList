@@ -1,6 +1,7 @@
 const input = document.querySelector('#textTarefaValor');
 const toDoList = document.querySelector('#lista_tarefas');
 const btnInserir = document.querySelector('#btnInserir');
+const btnDeletarTarefas = document.querySelector('#btnDeletarAllTasks');
 const body = document.body;
 
 
@@ -79,6 +80,12 @@ body.addEventListener("keypress", (e) => {
     window.location.reload();
   }
 })
+
+//apagar todas as tarefas (botão)
+btnDeletarTarefas.addEventListener('click', () => {
+  localStorage.clear();
+  window.location.reload();
+});
 
 //adicionar a efeito line-through(riscado) na tarefa
 toDoList.addEventListener("click", (e) => {
