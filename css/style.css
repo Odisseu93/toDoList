@@ -19,6 +19,12 @@ body {
   padding: 10px;
 }
 
+@media (max-width:375px) {
+  .utilizacao {
+    width: 90%
+  }
+}
+
 .utilizacao__titulo {
   font-weight: 800;
 }
@@ -64,8 +70,13 @@ body {
 }
 
 #textTarefaValor {
-  width: 274px;
+  width: 360px;
   font-size: 1em;
+  transition: 200ms;
+}
+
+#textTarefaValor:hover {
+  transform: scale(1.1);
 }
 
 #textTarefaValor::placeholder {
@@ -74,12 +85,60 @@ body {
 
 .boxBtnAndTxtInput {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+
+@media (max-width:375px) {
+
+  .ToDoList,
+  #textTarefaValor {
+    width: 90%
+  }
 }
 
 .btn {
+  width: 150px;
+  height: 40px;
+  margin: 10px 0;
   font-size: 0.8em;
-  margin-left: 1%;
+  border-radius: 10px;
+  font-weight: 800;
+}
+
+#btnDeletarAllTasks {
+  background: tomato;
+  color: antiquewhite;
+  transition: 200ms;
+}
+
+#btnDeletarAllTasks:hover{
+  cursor: pointer;
+  color: #F21E1E;
+  transform: scale(1.3);
+}
+
+#btnInserir {
+  background: lightgreen;
+  transition: 200ms;
+}
+
+#btnInserir:hover {
+  cursor: pointer;
+  color: #1A1AF7;
+  transform: scale(1.3);
+}
+
+
+@media (max-width:768px) {
+  .btn {
+    width: 200px;
+    height: 30px;
+    margin: 30px 0;
+    margin-left: 1%;
+  }
 }
 
 .ToDoList {
@@ -104,6 +163,13 @@ body {
 
 .ToDoList__lista-tarefas__item {
   border: 1px solid #000;
+}
+
+.ToDoList__lista-tarefas__item:hover {
+  /* border: 1px solid #000; */
+  cursor: pointer;
+  opacity: 70%;
+  color: #1A1AF7;
 }
 
 .line-through {
