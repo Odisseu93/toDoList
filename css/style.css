@@ -24,7 +24,7 @@ body {
 }
 
 .utilizacao__lista-Acoes__item {
-  padding: 10px;
+  padding: 20px;
 }
 
 .Cabecalho {
@@ -64,21 +64,17 @@ body {
 }
 
 #textTarefaValor {
-  min-width: 250px;
+  width: 274px;
   font-size: 1em;
+}
+
+#textTarefaValor::placeholder {
+  text-align: center;
 }
 
 .boxBtnAndTxtInput {
   display: flex;
   justify-content: center;
-}
-
-#textTarefaValor {
-  width: 25%;
-}
-
-#textTarefaValor::placeholder {
-  text-align: center;
 }
 
 .btn {
