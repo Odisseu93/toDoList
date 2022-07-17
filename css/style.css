@@ -1,14 +1,12 @@
 :root {
   font-family: 'Abel', sans-serif;
   font-size: 1.5em;
-  background: #FEE9CC;
+  background: #FADF5A;
   color: #000000;
   box-sizing: border-box;
 }
 
 body {
-  /* background-image: url("fundo.png"); */
-  background: #FADF5A;
   width: 100vw;
   height: 100vh;
 }
