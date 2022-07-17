@@ -1,6 +1,7 @@
 const input = document.querySelector('#textTarefaValor');
 const toDoList = document.querySelector('#lista_tarefas');
 const btnInserir = document.querySelector('#btnInserir');
+const body = document.body;
 
 
 // função para inserir a tarefa pelo botão
@@ -12,15 +13,15 @@ btnInserir.addEventListener('click', () => {
     const tarefaHTML = `
   <li class=${tarefa.class}>- ${tarefa.mensagem} </li> 
   `
-  
-  atualizarUl(tarefaHTML);
-  
-  input.value = ''; //limpando o input 
-  input.focus(); //autofocus
-} else {
-  const erroEntradaIvalida = 'insira um valor na caixa de entrada !';
-  alert(erroEntradaIvalida); //provisório
-}
+
+    atualizarUl(tarefaHTML);
+
+    input.value = ''; //limpando o input 
+    input.focus(); //autofocus
+  } else {
+    const erroEntradaIvalida = 'insira um valor na caixa de entrada !';
+    alert(erroEntradaIvalida); //provisório
+  }
 });
 
 
@@ -28,7 +29,7 @@ btnInserir.addEventListener('click', () => {
 input.addEventListener('keypress', (e) => {
   const valorInput = e.target.value;
   const tecla = e.key;
-  
+
   if ((tecla === 'Enter') && (valorInput != '')) { // insere uma tarefa caso o input não esteja vazio
     e.preventDefault();
     const tarefa = new Tarefa(input);// instancia da classe Tarefa
@@ -60,13 +61,23 @@ function atualizarUl(tarefa) {
   atualizarLocalStorage();
 }
 
-//apagar a tarefas
+//apagar a tarefa
 toDoList.addEventListener("dblclick", (e) => {
   e.target.remove();
   const li = document.querySelectorAll('.ToDoList__lista-tarefas__item');
   if (li.length === 0) localStorage.clear(); //verifica se não tem tem algun item ainda
 
   atualizarLocalStorage()
+})
+
+//apagar todas as tarefas
+body.addEventListener("keypress", (e) => {
+  const tecla = e.key;
+
+  if (tecla === '!') {
+    localStorage.clear();
+    window.location.reload();
+  }
 })
 
 //adicionar a efeito line-through(riscado) na tarefa
