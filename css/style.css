@@ -33,8 +33,13 @@ body {
   display: flex;
   justify-content: space-evenly;
   background: linear-gradient(90deg, white 3%, #FFF6BA);
-  height: 10%;
+  height: 100px;
 }
+
+/* .hdrLogo {
+  width: 100px;
+  height: 80px;
+} */
 
 .nvMenu {
   display: flex;
