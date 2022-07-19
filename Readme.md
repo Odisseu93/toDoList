@@ -23,6 +23,7 @@
 ! - 17/07/2022 alteração do HTML
 ! - 17/07/2022 criação de novas funções
 ! - 17/07/2022 update no CSS
+! - 18/07/2022 organizado o código em Javascript em arquivos diferentes
 ```
 
 ## Materias de estudo
