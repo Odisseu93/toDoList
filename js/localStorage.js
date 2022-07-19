@@ -14,3 +14,12 @@ function salvar(tarefas) {
 
 }
 
+//função para atulizar os dados no localStorage()
+function atualizarLocalStorage() {
+  const tarefasHTML = document.querySelectorAll('.ToDoList__lista-tarefas__item');
+  const tarefasArray = []
+  tarefasHTML.forEach(tarefa => {
+    tarefasArray.push(tarefa.outerHTML);
+    salvar(tarefasArray);
+  });
+}
