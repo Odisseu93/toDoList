@@ -1,5 +1,10 @@
 # To Do List 
 
+<div align=center>
+<a href="https://imgur.com/pyfeOzi"><img src="https://i.imgur.com/pyfeOzi.png" title="source: imgur.com"  width=50%/></a>
+<a href="https://imgur.com/4oN4XXE"><img src="https://i.imgur.com/4oN4XXE.png" title="source: imgur.com" width=50%//></a>
+</div>
+
 
 ## Objetivos:
 - [X] Criar uma lista de Afazeres utilizando HTML e CSS
@@ -7,27 +12,6 @@
 - [x] Fazer o estilo da Página no CSS.
 - [x] implementar o localStorage para salvar as tarefas
 
-## Mobile compatibility
-### Max width screen Mobile:
-- **<=425px** 
-  - [ ] to do 
-  - [ ] doing
-  - [x] done
-
-- **>425px** 
-  - [ ] to do 
-  - [ ] doing
-  - [x] done
-
-  - **>768px** 
-  - [ ] to do 
-  - [ ] doing
-  - [x] done
-
-  - **>1024px** 
-  - [ ] to do 
-  - [ ] doing
-  - [x] done
 
 ## Updates:
 ```diff 
