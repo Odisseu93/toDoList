@@ -13,8 +13,20 @@ btnInserir.addEventListener('click', () => {
     input.value = ''; //limpando o input 
     input.focus(); //autofocus
   } else {
-    const erroEntradaIvalida = 'insira um valor na caixa de entrada !';
-    alert(erroEntradaIvalida); //provisório
+    const input = document.querySelector('#textTarefaValor');
+    const mensagemOriginal = 'Insira a sua tarefa aqui!'
+    const erroEntradaInvalida = 'Insira uma Tarefa!';
+
+    //monstra mensagem no placeholder e faz uma animação no input
+    input.placeholder = erroEntradaInvalida
+    input.classList.add('invalid');
+
+    setTimeout( ()=>{
+      input.classList.remove('invalid');
+      input.placeholder = mensagemOriginal;
+    }
+    ,2000)// tempo seta em 2s
+
   }
 });
 
@@ -23,10 +35,10 @@ btnInserir.addEventListener('click', () => {
 input.addEventListener('keypress', (e) => {
   const valorInput = e.target.value;
   const tecla = e.key;
+  const tarefa = new Tarefa(input);// instancia da classe Tarefa
 
   if ((tecla === 'Enter') && (valorInput != '')) { // insere uma tarefa caso o input não esteja vazio
     e.preventDefault();
-    const tarefa = new Tarefa(input);// instancia da classe Tarefa
     const tarefaHTML = `
     <li class=${tarefa.class}>- ${tarefa.mensagem} </li> 
     `
@@ -35,14 +47,19 @@ input.addEventListener('keypress', (e) => {
     input.value = ''; //limpando o input 
     input.focus(); //autofocus
   } else if ((tecla === 'Enter') && (valorInput === '')) {
-    const erroEntradaIvalida = 'insira um valor na caixa de entrada !';
-    /*
-    exibindo como erro no console.log
     e.preventDefault();
-    console.error(erroEntradaIvalida); 
-    throw new Error(erroEntradaIvalida) ; //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw
-    */
+    const input = document.querySelector('#textTarefaValor');
+    const mensagemOriginal = 'Insira a sua tarefa aqui!';
+    const erroEntradaInvalida = 'Insira uma Tarefa!';
 
-    alert(erroEntradaIvalida); //provisório
+    input.placeholder = erroEntradaInvalida
+    input.classList.add('invalid');
+
+    setTimeout( ()=>{
+      input.classList.remove('invalid');
+      input.placeholder = mensagemOriginal;
+    }
+    ,2000)// tempo seta em 2s
+
   }
 });
