@@ -19,16 +19,20 @@
   </header>
   <div class="utilizacao" id="sobre">
     <h2 class="utilizacao__titulo">❓</h2>
-     <ul class="utilizacao__lista-Acoes">
-     <li class="utilizacao__lista-Acoes__item"> 🐁Um click no mouse ou <br/>um toque<br/>=<br/>Marca tarefa como feita ✅</li> 
-     <li class="utilizacao__lista-Acoes__item"> 🐁🐁Dois clicks no mouse ou <br/>dois toques<br/>= <br/>Exclui a tarefa ☠</li> 
-     <li class="utilizacao__lista-Acoes__item"> ❗Digite "!" ou <br/>aperte o botão<br/>= <br/>Exclui a todas as tarefas 💣</li> 
+    <ul class="utilizacao__lista-Acoes">
+      <li class="utilizacao__lista-Acoes__item"> 🐁Um click no mouse ou <br />um toque<br />=<br />Marca tarefa como
+        feita ✅</li>
+      <li class="utilizacao__lista-Acoes__item"> 🐁🐁Dois clicks no mouse ou <br />dois toques<br />= <br />Exclui a
+        tarefa ☠</li>
+      <li class="utilizacao__lista-Acoes__item"> ❗Digite "!" ou <br />aperte o botão<br />= <br />Exclui a todas as
+        tarefas 💣</li>
     </ul>
   </div>
   <main>
     <form action="" class="frmList">
       <div class="boxBtnAndTxtInput">
-        <input type="text" id="textTarefaValor" autofocus placeholder="Insira a sua tarefa aqui!" maxlength="19" autofocus>
+        <input type="text" id="textTarefaValor" class="input" autofocus placeholder="Insira a sua tarefa aqui!"
+          maxlength="19" autofocus>
         <input type="button" id="btnInserir" class="btn" value="Inserir">
         <input type="button" id="btnDeletarAllTasks" class="btn" value="Apagar Tudo">
       </div>
@@ -41,10 +45,19 @@
       </div>
     </form>
   </main>
+  <div class="alteracaoTarefas">
+    <form action="" class="alteracaoTarefas__form">
+      <input type="text" class="input" name="input" id="alteracaoTarefasInput" placeholder="Altere ou Cancele!"
+        maxlength="19">
+      <button type="button" class="btn" id="btnAlterar">Alterar</button>
+      <button type="button" class="btn" id="btnCancelar">cancelar</button>
+    </form>
+  </div>
 </body>
-<script src=".\js\tarefa.js" ></script>
+<script src=".\js\tarefa.js"></script>
 <script src="js/main.js"></script>
 <script src="js/localStorage.js"></script>
 <script src="js/inserir-tarefas.js"></script>
 <script src="js/apagar-tarefas.js"></script>
+
 </html>
