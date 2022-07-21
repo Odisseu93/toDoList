@@ -24,6 +24,7 @@
 ! - 17/07/2022 criação de novas funções
 ! - 17/07/2022 update no CSS
 ! - 18/07/2022 organizado o código em Javascript em arquivos diferentes
+! - 20/07/2022 validacao para evitar duplicidade nas tarefas
 ```
 
 ## Materias de estudo
@@ -38,3 +39,6 @@
 - site: [CSS Media Queries - Examples](https://www.w3schools.com/Css/css3_mediaqueries_ex.asp)
   
 - vídeo [arrow function](https://www.youtube.com/watch?v=S5Mn0qQzJ-0)
+
+- Fórum: [Remove array item from localstorage](https://stackoverflow.com/questions/38748298/remove-array-item-from-localstorage)
+
