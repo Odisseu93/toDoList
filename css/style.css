@@ -77,17 +77,17 @@ body {
   color: blue;
 }
 
-#textTarefaValor {
+.input {
   width: 360px;
   font-size: 1em;
   transition: 200ms;
 }
 
-#textTarefaValor:hover {
+.input:hover {
   transform: scale(1.1);
 }
 
-#textTarefaValor::placeholder {
+.input::placeholder {
   text-align: center;
 }
 
@@ -146,7 +146,7 @@ body {
   color: red;
 }
 
-.boxBtnAndTxtInput {
+.boxBtnAndTxtInput, .alteracaoTarefas__form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -157,7 +157,7 @@ body {
 @media (max-width:375px) {
 
   .ToDoList,
-  #textTarefaValor {
+  .input {
     width: 90%
   }
 }
@@ -240,4 +240,8 @@ body {
 
 .mostrar-display {
   display: block;
+}
+
+.display-none {
+  display: none;
 }
