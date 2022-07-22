@@ -1,4 +1,5 @@
 const input = document.querySelector('#textTarefaValor');
+const formToDoList = document.querySelector('.frmList');
 const toDoList = document.querySelector('#lista_tarefas');
 const btnInserir = document.querySelector('#btnInserir');
 const btnDeletarTarefas = document.querySelector('#btnDeletarAllTasks');
