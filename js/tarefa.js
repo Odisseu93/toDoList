@@ -1,7 +1,7 @@
 //classe para a tarefa
 class Tarefa {
   constructor(input) {
-    this.mensagem = input.value;
+    this.mensagem = input.value.replace(/\s{2,}/,'') ;
     this.class = "ToDoList__lista-tarefas__item";
   }
   
