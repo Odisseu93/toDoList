@@ -146,7 +146,8 @@ body {
   color: red;
 }
 
-.boxBtnAndTxtInput, .alteracaoTarefas__form {
+.boxBtnAndTxtInput,
+.alteracaoTarefas__form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -236,6 +237,40 @@ body {
 .line-through {
   text-decoration: line-through;
   color: green;
+}
+
+@keyframes pisca {
+
+
+  0% {
+    background: transparent;
+    color: #333;
+  }
+
+  25% {
+    background: lightblue;
+    color: #1A1AF7;
+  }
+
+  25% {
+    background: lightblue;
+    color: green;
+  }
+
+  20% {
+    border-color: aliceblue;
+  }
+
+  100% {
+    background: transparent;
+    color: #333;
+  }
+
+}
+
+.alterado {
+  animation: pisca 3.5s;
+
 }
 
 .mostrar-display {
