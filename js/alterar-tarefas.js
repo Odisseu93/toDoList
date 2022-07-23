@@ -7,52 +7,57 @@ let intervalId;
 let tempoClickPres = 0;
 
 
+//função para observar o tempo que a tecla ficou pressionada
 toDoList.addEventListener('mousedown', function (e) {
   tarefaSelecinada = e.target;
   intervalId = setInterval(function () {
     tempoClickPres++;
     console.log(tempoClickPres);
-  }, 500);
+  }, 200);
 
 
 })
 
 
+//chamando o formulário de alteração de trefas
 toDoList.addEventListener("mouseup", function () {
   clearInterval(intervalId);
   if (tempoClickPres >= 2) {
     formToDoList.classList.add('display-none'); //oculta o form da todo list
     alteracaoForm.classList.remove('display-none'); //exibe o form para a alteracao de tarefas
-    alteracaoForm.placeholder = tarefaSelecinada.textContent.replace('-', ""); // recupera o valor da tarefa
+    alteracaoForm.input.value = tarefaSelecinada.textContent.replace(/-\s*/, ""); // recupera o valor da tarefa subtituindo os espaços vazios
   }
   tempoClickPres = 0;
 });
 
 
-
-
-console.log(tarefaSelecinada);
 btnAlterar.addEventListener('click', () => {
-  if (alteracaoEhvalida(tarefaSelecinada)) {
+  if (alteracaoEhvalida()) {
     tarefaSelecinada.innerText = `- ${alteracaoForm.input.value}`
     formToDoList.classList.remove('display-none'); //oculta o form da todo list
     alteracaoForm.classList.add('display-none'); //exibe o form para a alteracao de tarefas
+    tarefaSelecinada.classList.remove('line-through');
+    tarefaSelecinada.classList.add('alterado');
+    setTimeout(function(){
+      tarefaSelecinada.classList.remove('alterado');//efeito na tarefa que foi selecionada
+      atualizarLocalStorage()
+    },2000)
     tempoClickPres = 0;
-    atualizarLocalStorage()
+
   } 
 });
 
+//validação de tarefas
 function alteracaoEhvalida() {
-  const reg = new RegExp('(\\s)' + alteracaoForm.input.value.replace(/\s{2,}/, '') + '(\\s)', 'i');
-
-  if (toDoList.textContent.search(reg) < 0) return true
-  else return false
+  const reg = new RegExp(alteracaoForm.input.value.replace(/\s{2,}/g,'') , 'i'); //provisório
+  console.log(reg.test(toDoList.textContent));
+  if (reg.test(toDoList.textContent)) return false
+  else return true
 
 }
 
 
 btnCancelar.addEventListener('click', () => {
-  // clearInterval(intervalId);
   formToDoList.classList.remove('display-none'); //oculta o form da todo list
   alteracaoForm.classList.add('display-none'); //exibe o form para a alteracao de tarefas
   tempoClickPres = 0;
