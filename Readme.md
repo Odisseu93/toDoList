@@ -27,6 +27,10 @@
 ! - 20/07/2022 validacao para evitar duplicidade nas tarefas
 ```
 
+## falta fazer:
+- Correção na validação da tarefas 
+- Implementação do formuláriio de alteração de tarefas
+
 ## Materias de estudo
 - site: [Documentação localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 - Fórum: [Remove array item from localstorage](https://stackoverflow.com/questions/38748298/remove-array-item-from-localstorage)
